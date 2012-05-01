@@ -25,7 +25,7 @@ include $(TOPDIR)/config.mk
 
 LIB	= $(obj)lib$(BOARD).o
 
-COBJS	= $(BOARD).o ../ox820/sata.o dram.o ../ox820/eth.o ../ox820/synopsis.o
+COBJS	= $(BOARD).o ../ox820/sata.o ../ox820/dram.o ../ox820/eth.o ../ox820/synopsis.o
 SOBJS   = ../ox820/lowlevel_init.o
 
 SRCS	:= $(SOBJS:.o=.S) $(COBJS:.o=.c)
