@@ -42,6 +42,7 @@
 //#define CONFIG_CMD_NFS
 #define CONFIG_CMD_NAND
 #define CONFIG_CMD_MII
+#define CONFIG_CMD_USB
 #define CONFIG_MII
 
 /*
@@ -157,6 +158,10 @@
 /*
  * USB Host
  */
+#define CONFIG_USB_STORAGE
+#define CONFIG_USB_EHCI
+#define CONFIG_USB_EHCI_OXNAS
+#define CONFIG_EHCI_IS_TDI
 
 /*
  * Shell

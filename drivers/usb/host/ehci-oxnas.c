@@ -221,14 +221,7 @@ void stop_oxnas_usb_ehci()
 
 int usb_hcd_oxnas_probe()
 {
-    u32 ehci_id;
 	start_oxnas_usb_ehci();
-
-	if (((ehci_id = readl(USBHOST_BASE)) & 0x2f) != 0x05) {
-		printf("wrong chip ID found %x", ehci_id);
-		return 1;
-	}
-
 
 	hccr = (struct ehci_hccr *)USBHOST_BASE;
 	hcor = (struct ehci_hcor *)(USBHOST_BASE + 0x100);
